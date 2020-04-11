@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="872006fd-c9f1-4cff-b3c2-9dcadd8c558e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chess/Chess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chess/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chess/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/TextureManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Chess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/Chess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Chess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,21 +93,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1586604752650">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1586610982809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586604752650" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1586604752649">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586610982809" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1586610534100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586604752649" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1586604752649">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586610534100" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1586610534100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586604752649" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1586604752650">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586610534100" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1586610534100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586604752650" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586610534100" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1586610534100">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586610534100" />
   </component>
 </project>
