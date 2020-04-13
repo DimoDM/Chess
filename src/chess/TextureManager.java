@@ -11,6 +11,9 @@ public class TextureManager extends JComponent {
     int height;
     String path;
 
+    TextureManager() {
+    }
+
     public TextureManager(int x, int y, int width, int height, String path) {
         this.x = x;
         this.y = y;
@@ -27,7 +30,25 @@ public class TextureManager extends JComponent {
         Image image = imageIcon.getImage();
 
         graph.drawImage(image, this.x, this.y, this.width, this.height, null);
+    }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void render() {
+        Thread animationThread = new Thread(new Runnable() {
+            public void run() {
+                    repaint();
+                    try {Thread.sleep(10);} catch (Exception ex) {}
+            }
+        });
+
+        animationThread.start();
     }
 
 
