@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="872006fd-c9f1-4cff-b3c2-9dcadd8c558e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Chess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/TextureManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/TextureManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Chess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Chess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/TextureManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="872006fd-c9f1-4cff-b3c2-9dcadd8c558e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
