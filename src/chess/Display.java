@@ -24,6 +24,7 @@ public class Display{
 
     public void addGraphic(TextureManager t) {
         frame.add(t);
+        frame.setVisible(true);
     }
 
 

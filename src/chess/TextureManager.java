@@ -44,7 +44,6 @@ public class TextureManager extends JComponent {
         Thread animationThread = new Thread(new Runnable() {
             public void run() {
                     repaint();
-                    try {Thread.sleep(10);} catch (Exception ex) {}
             }
         });
 
