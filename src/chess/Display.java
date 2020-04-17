@@ -10,13 +10,14 @@ public class Display{
     int height;
 
     Display(int widthSize, int heightSize, String name) {
-        this.width = widthSize;
-        this.height = heightSize;
+        this.width = widthSize - 40;
+        this.height = heightSize - 40;
 
-        frame.setSize(widthSize, heightSize);
+        frame.setSize(widthSize - 24, heightSize - 2);
+        //frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        frame.add(new TextureManager());
+        //frame.add(new TextureManager());
         frame.setTitle(name);
         frame.setResizable(true);
         frame.setVisible(true);

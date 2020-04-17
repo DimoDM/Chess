@@ -8,7 +8,7 @@ public class Board {
 
     TextureManager boardTex = new TextureManager(0, 0, Chess.display.width,
             Chess.display.height, "src/assets/ChessBoard.png");
-    List<TextureManager> textures = new ArrayList<TextureManager>();
+    List<TextureManager> textures = new ArrayList<>();
 
     int[][] board = {
             {51, 31, 41, 101, 91, 41, 31, 51},
