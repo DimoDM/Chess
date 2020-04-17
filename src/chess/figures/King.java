@@ -4,12 +4,11 @@ import chess.TextureManager;
 
 public class King extends PlayingPiece {
 
-    public King(int xPos, int yPos, TextureManager texture, char color) {
-        super(xPos, yPos, texture, color);
+    public King(TextureManager texture, char color) {
+        super(texture, color);
     }
 
-    public King(int xPos, int yPos) {
-        super(xPos, yPos);
+    public King() {
     }
 
     @Override

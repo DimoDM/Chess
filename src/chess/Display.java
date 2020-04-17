@@ -26,6 +26,10 @@ public class Display{
         frame.setVisible(true);
     }
 
+    public void removeGraphic(TextureManager t) {
+        frame.remove(t);
+    }
+
     public int getWidth() {
         return width;
     }

@@ -10,6 +10,7 @@ public class Main {
         while(true) {
             chess.update();
             chess.render();
+            chess.clean();
         }
     }
 }

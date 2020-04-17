@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Chess {
 
     public static Display display;
-    Board board;
+    public static Board board;
     InputManager input;
 
     public void init() {
@@ -15,7 +15,8 @@ public class Chess {
     }
 
     public void update() {
-
+        input.update();
+        //board.update();
     }
 
     public void render() {
@@ -23,5 +24,9 @@ public class Chess {
 
 
         try {Thread.sleep(10);} catch (Exception ex) {}
+    }
+
+    public void clean() {
+        //board.clean();
     }
 }

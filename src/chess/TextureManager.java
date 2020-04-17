@@ -40,6 +40,10 @@ public class TextureManager extends JComponent {
         this.y = y;
     }
 
+    public String getPath() {
+        return path;
+    }
+
     public void render() {
         Thread animationThread = new Thread(new Runnable() {
             public void run() {

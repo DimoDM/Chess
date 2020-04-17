@@ -3,6 +3,7 @@ package chess;
 import chess.figures.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -25,7 +26,6 @@ public class Board {
 
     Board() {
         init();
-        Chess.display.addGraphic(boardTex);
 
     }
 
@@ -35,10 +35,9 @@ public class Board {
 
     public void update() {
 
-        clean();
-
         int width = Chess.display.width / 8;
         int height = Chess.display.height / 8;
+        clean();
 
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
@@ -65,40 +64,41 @@ public class Board {
                         path.append("King.png");
                         break;
                 }
-                System.out.println(height * j + " " + width * i + " " + path.toString());
                 textures.add(new TextureManager(height * j, width * i, width, height, path.toString()));
                 Chess.display.addGraphic(textures.get(textures.size() - 1));
 
             }
         }
+        Chess.display.addGraphic(boardTex);
+        for(int[] b: board)System.out.println(Arrays.toString(b));
 
     }
 
     public void move(int currX, int currY, int nextX, int nextY) {
-        if(checkFigure(board[currX][currY], currX, currY).isLegalMove(currX, currY, nextX, nextY)) {
-            board[nextX][nextY] = board[currX][currY];
-            board[currX][currY] = 0;
-            update();
-        }
+        if(checkFigure(board[currY][currX]).isLegalMove(currX, currY, nextX, nextY)) {
+            board[nextY][nextX] = board[currY][currX];
+            board[currY][currX] = 0;
+        } else System.out.println("can't move");
+        update();
 
     }
 
-    private PlayingPiece checkFigure(int number, int x, int y) {
+    public PlayingPiece checkFigure(int number) {
         switch (number / 10) {
             case 1:
-                return new Pawn(x, y);
+                return new Pawn();
             case 3:
-                return new Knight(x, y);
+                return new Knight();
             case 4:
-                return new Bishop(x, y);
+                return new Bishop();
             case 5:
-                return new Rook(x, y);
+                return new Rook();
             case 9:
-                return new Queen(x, y);
+                return new Queen();
             case 10:
-                return new King(x, y);
+                return new King();
             default:
-                return new PlayingPiece(x, y);
+                return new PlayingPiece();
         }
     }
 
@@ -110,7 +110,9 @@ public class Board {
     }
 
     public void clean() {
-        for (int i = 0; i < textures.size(); i++) {
+        Chess.display.removeGraphic(boardTex);
+        for (int i = 0; i < textures.size(); i+=0) {
+            Chess.display.removeGraphic(textures.get(i));
             textures.remove(0);
         }
     }
