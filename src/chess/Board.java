@@ -2,7 +2,7 @@ package chess;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
+
 
 public class Board {
 
@@ -22,12 +22,12 @@ public class Board {
     };
 
     Board() {
-        printBoard();
+        initBoard();
         Chess.display.addGraphic(boardTex);
 
     }
 
-    public void printBoard() {
+    public void initBoard() {
 
         int width = Chess.display.width / 8;
         int height = Chess.display.height / 8;

@@ -18,7 +18,7 @@ public class Display{
         frame.setLocationRelativeTo(null);
         frame.add(new TextureManager());
         frame.setTitle(name);
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.setVisible(true);
     }
 
