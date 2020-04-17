@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="872006fd-c9f1-4cff-b3c2-9dcadd8c558e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/PlayingPiece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/figures/Rook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/chess/Display.class" afterDir="false" />
@@ -34,6 +41,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestWork" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="chess.figures" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chess.Main" />
@@ -63,6 +75,19 @@
       <module name="Chess" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="chess.figures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chess.Main" />
+      <module name="Chess" />
+      <extension name="coverage">
+        <pattern>
           <option name="PATTERN" value="chess.*" />
           <option name="ENABLED" value="true" />
         </pattern>
@@ -72,8 +97,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -107,34 +132,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1586792220244">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1587124449753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586792220244" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1587124449753" />
+    <state x="413" y="144" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587123436240">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="144" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1587123436240" />
+    <state x="479" y="248" width="407" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587123438646">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="248" width="407" height="241" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1587123438646" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1586954652968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586954652968" />
-    <state width="1322" height="173" key="GridCell.Tab.0.bottom" timestamp="1586958708356">
+    <state width="1322" height="173" key="GridCell.Tab.0.bottom" timestamp="1587126318301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586958708356" />
-    <state width="1322" height="173" key="GridCell.Tab.0.center" timestamp="1586958708355">
+    <state width="1322" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587126318301" />
+    <state width="1322" height="173" key="GridCell.Tab.0.center" timestamp="1587126318300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586958708355" />
-    <state width="1322" height="173" key="GridCell.Tab.0.left" timestamp="1586958708355">
+    <state width="1322" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587126318300" />
+    <state width="1322" height="173" key="GridCell.Tab.0.left" timestamp="1587126318299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586958708355" />
-    <state width="1322" height="173" key="GridCell.Tab.0.right" timestamp="1586958708355">
+    <state width="1322" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587126318299" />
+    <state width="1322" height="173" key="GridCell.Tab.0.right" timestamp="1587126318301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586958708355" />
-    <state x="229" y="87" key="com.intellij.ide.util.TipDialog" timestamp="1587114469302">
+    <state width="1322" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587126318301" />
+    <state x="229" y="87" key="com.intellij.ide.util.TipDialog" timestamp="1587125884534">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="229" y="87" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587114469302" />
+    <state x="229" y="87" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587125884534" />
     <state x="65" y="0" key="new project wizard" timestamp="1586789177721">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
