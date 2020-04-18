@@ -12,8 +12,8 @@ public class InputManager extends JPanel implements ChangeListener {
 
     private int pressedFigureIndex = -1;
     private boolean isMouseRealised = false;
-    private int currX;
-    private int currY;
+    private int currX = -1;
+    private int currY = -1;
     private boolean pressed = false;
 
     InputManager() {
@@ -50,24 +50,24 @@ public class InputManager extends JPanel implements ChangeListener {
     }
 
     private void mousePressed(int x, int y,int xIndex, int yIndex, int width, int height) {
-        if (pressedFigureIndex == -1) {
-            for (int i = 0; i < Chess.board.textures.size(); i++) {
-                if (Chess.board.textures.get(i).x == xIndex * width && Chess.board.textures.get(i).y == yIndex * height) {
-                    currX = xIndex;
-                    currY = yIndex;
-                    pressedFigureIndex = i;
-                    break;
-                }
-            }
-        } else {
-            Chess.board.textures.get(pressedFigureIndex).setX(x - (width / 2));
-            Chess.board.textures.get(pressedFigureIndex).setY(y - (height / 2));
+        if(Chess.board.board[yIndex][xIndex].getColor() != ' ' && currY == -1 && currX == -1){
+            currX = xIndex;
+            currY = yIndex;
+        }
+        System.out.println("Mouse Pressed " + Chess.board.board[currY][currX].path);
+        if(currX != -1 && currY != -1) {
+            Chess.board.board[currY][currX].setX(x - (width / 2));
+            Chess.board.board[currY][currX].setY(y - (width / 2));
+            Chess.board.board[currY][currX].render();
         }
     }
 
     private void mouseReleased(int xIndex, int yIndex) {
+        System.out.println("Mouse Released");
         isMouseRealised = false;
         Chess.board.move(currX, currY, xIndex, yIndex);
+        currY = -1;
+        currX = -1;
         pressedFigureIndex = -1;
     }
 

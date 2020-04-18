@@ -17,13 +17,12 @@ public class Chess {
     }
 
     public void render() {
-        board.render();
+        //board.render();
 
 
         try {Thread.sleep(10);} catch (Exception ex) {}
     }
 
     public void clean() {
-        //board.clean();
     }
 }

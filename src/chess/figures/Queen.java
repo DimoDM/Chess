@@ -4,8 +4,8 @@ import chess.TextureManager;
 
 public class Queen extends PlayingPiece {
 
-    public Queen(TextureManager texture, char color) {
-        super(texture, color);
+    public Queen(int x, int y, String path) {
+        super(x, y, path);
     }
 
     public Queen() {

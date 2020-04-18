@@ -4,8 +4,8 @@ import chess.TextureManager;
 
 public class Rook extends PlayingPiece {
 
-    public Rook(TextureManager texture, char color) {
-        super( texture, color);
+    public Rook(int x, int y, String path) {
+        super(x, y, path);
     }
 
     public Rook() {

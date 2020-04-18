@@ -5,8 +5,8 @@ import chess.TextureManager;
 public class Pawn extends PlayingPiece {
 
 
-    public Pawn(TextureManager texture, char color) {
-        super(texture, color);
+    public Pawn(int x, int y, String path) {
+        super(x, y, path);
     }
     public Pawn() {
     }

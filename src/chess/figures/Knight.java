@@ -4,10 +4,9 @@ import chess.TextureManager;
 
 public class Knight extends PlayingPiece {
 
-    public Knight(TextureManager texture, char color) {
-        super(texture, color);
+    public Knight(int x, int y, String path) {
+        super(x, y, path);
     }
-
     public Knight() {
     }
 
