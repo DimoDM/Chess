@@ -26,7 +26,6 @@ public class Board {
 
     Board() {
         init();
-
     }
 
     public void init() {
@@ -70,7 +69,7 @@ public class Board {
             }
         }
         Chess.display.addGraphic(boardTex);
-        for(int[] b: board)System.out.println(Arrays.toString(b));
+        //for(int[] b: board)System.out.println(Arrays.toString(b));
 
     }
 
@@ -97,8 +96,8 @@ public class Board {
                 return new Queen();
             case 10:
                 return new King();
-            default:
-                return new PlayingPiece();
+            default:return new Pawn();
+
         }
     }
 

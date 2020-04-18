@@ -3,7 +3,7 @@ package chess.figures;
 import chess.Chess;
 import chess.TextureManager;
 
-public class PlayingPiece {
+public abstract class PlayingPiece {
 
     TextureManager texture;
     char color;

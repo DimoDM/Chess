@@ -1,7 +1,5 @@
 package chess;
 
-import java.util.Scanner;
-
 public class Chess {
 
     public static Display display;
@@ -16,7 +14,6 @@ public class Chess {
 
     public void update() {
         input.update();
-        //board.update();
     }
 
     public void render() {
