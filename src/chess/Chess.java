@@ -10,6 +10,7 @@ public class Chess {
         display = new Display(600, 600, "Chess");
         board = new Board();
         input = new InputManager();
+
     }
 
     public void update() {

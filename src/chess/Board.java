@@ -12,7 +12,7 @@ public class Board {
     TextureManager boardTex = new TextureManager(0, 0, Chess.display.width,
             Chess.display.height, "src/assets/ChessBoard.png");
 
-    PlayingPiece[][] board = new PlayingPiece[8][8];
+    public PlayingPiece[][] board = new PlayingPiece[8][8];
 
     Board() {
         init();
@@ -61,22 +61,20 @@ public class Board {
             for (int j = 0; j < board[i].length; j++) {
                 board[i][j].setX(j * PlayingPiece.HEIGHT);
                 board[i][j].setY(i * PlayingPiece.WIDTH);
-
+                //System.out.print(board[i][j].getColor() + ", ");
             }
+            //System.out.println();
         }
-        Chess.display.addGraphic(boardTex);
         render();
     }
 
     public void move(int currX, int currY, int nextX, int nextY) {
-        if(board[currY][currX].isLegalMove(currX, currY, nextX, nextY)) {
+        if(board[currY][currX].isLegalMove(currX, currY, nextY, nextX)) {
+            Chess.display.removeGraphic(board[nextY][nextX].getTexture());
             board[nextY][nextX] = board[currY][currX];
-            Chess.display.removeGraphic(board[currX][currY].getTexture());
             board[currY][currX] = new EmptyFigure(currX * PlayingPiece.WIDTH,currY * PlayingPiece.HEIGHT,"src\\assets\\empty.png");
-            Chess.display.addGraphic(board[currX][currY].getTexture());
         } else System.out.println("can't move");
         update();
-
     }
 
 
@@ -87,6 +85,21 @@ public class Board {
                 board[i][j].render();
             }
         }
+    }
+
+    public void clean() {
+        Chess.display.removeGraphic(boardTex);
+        for (PlayingPiece[] playingPieces : board) {
+            for (PlayingPiece playingPiece : playingPieces) {
+                Chess.display.removeGraphic(playingPiece.getTexture());
+            }
+        }
+    }
+
+    public void makeBoardTexBackground() {
+        Chess.display.removeGraphic(boardTex);
+        Chess.display.addGraphic(boardTex);
+        //boardTex.render();
     }
 
 }
