@@ -61,6 +61,10 @@ public class InputManager extends JPanel implements ChangeListener {
         }
         //System.out.println("Mouse Pressed " + Chess.board.board[currY][currX].path);
         else if (currX != -1 && currY != -1) {
+            if(Chess.board.board[yIndex][xIndex].getColor() == Chess.board.board[currY][currX].getColor()){
+                currX = xIndex;
+                currY = yIndex;
+            }
                 Chess.board.board[currY][currX].setX(x - (width / 2));
                 Chess.board.board[currY][currX].setY(y - (width / 2));
                 Chess.board.board[currY][currX].render();
@@ -99,7 +103,7 @@ public class InputManager extends JPanel implements ChangeListener {
         for (int i = 0; i < textures.size(); i += 0) {
             Chess.display.removeGraphic(textures.get(0));
             textures.remove(0);
-            System.out.println(1);
+            //System.out.println(1);
         }
     }
 
