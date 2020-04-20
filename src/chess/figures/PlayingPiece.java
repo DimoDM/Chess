@@ -12,6 +12,7 @@ public abstract class PlayingPiece {
     public String path;
     public final static int WIDTH = Chess.display.getWidth() / 8;
     public final static int HEIGHT = Chess.display.getHeight() / 8;
+    public boolean isKing;
 
     public PlayingPiece(int x, int y, String path) {
         this.x = x;
@@ -21,16 +22,20 @@ public abstract class PlayingPiece {
         else if(path.contains("black")) color = 'b';
         else color = ' ';
         texture = new TextureManager(this.x, this.y, WIDTH, HEIGHT, path);
+        isKing = false;
     }
 
     public PlayingPiece() {
+    }
+    public PlayingPiece(char color) {
+        this.color = color;
     }
 
     public TextureManager getTexture() {
         return texture;
     }
 
-    public boolean isLegalMove(int currX, int currY, int nextX, int nextY) {
+    public boolean isLegalMove(int currX, int currY, int nextY, int nextX) {
         return false;
     }
     public void render() {
@@ -49,5 +54,13 @@ public abstract class PlayingPiece {
 
     public char getColor() {
         return color;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }

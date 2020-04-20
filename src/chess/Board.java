@@ -2,17 +2,15 @@ package chess;
 
 import chess.figures.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-
 public class Board {
 
     TextureManager boardTex = new TextureManager(0, 0, Chess.display.width,
             Chess.display.height, "src/assets/ChessBoard.png");
 
+
     public PlayingPiece[][] board = new PlayingPiece[8][8];
+    public Vector2D whiteKingCords = new Vector2D();
+    public Vector2D blackKingCords = new Vector2D();
 
     Board() {
         init();
@@ -29,6 +27,8 @@ public class Board {
         board[0][2] = new Bishop(figureWidth * 2, 0, "src\\assets\\blackBishop.png");
         board[0][3] = new Queen(figureWidth * 3, 0, "src\\assets\\blackQueen.png");
         board[0][4] = new King(figureWidth * 4, 0, "src\\assets\\blackKing.png");
+        blackKingCords.x = 4;
+        blackKingCords.y = 0;
         board[0][5] = new Bishop(figureWidth * 5, 0, "src\\assets\\blackBishop.png");
         board[0][6] = new Knight(figureWidth * 6, 0, "src\\assets\\blackKnight.png");
         board[0][7] = new Rook(figureWidth * 7,0,"src\\assets\\blackRook.png");
@@ -38,6 +38,8 @@ public class Board {
         board[7][2] = new Bishop(figureWidth * 2, figureWidth * 7, "src\\assets\\whiteBishop.png");
         board[7][3] = new Queen(figureWidth * 3, figureWidth * 7, "src\\assets\\whiteQueen.png");
         board[7][4] = new King(figureWidth * 4, figureWidth * 7, "src\\assets\\whiteKing.png");
+        whiteKingCords.x = 4;
+        whiteKingCords.y = 7;
         board[7][5] = new Bishop(figureWidth * 5, figureWidth * 7, "src\\assets\\whiteBishop.png");
         board[7][6] = new Knight(figureWidth * 6, figureWidth * 7, "src\\assets\\whiteKnight.png");
         board[7][7] = new Rook(figureWidth * 7,figureWidth * 7,"src\\assets\\whiteRook.png");
@@ -61,15 +63,14 @@ public class Board {
             for (int j = 0; j < board[i].length; j++) {
                 board[i][j].setX(j * PlayingPiece.HEIGHT);
                 board[i][j].setY(i * PlayingPiece.WIDTH);
-                //System.out.print(board[i][j].getColor() + ", ");
             }
-            //System.out.println();
         }
         render();
     }
 
     public void move(int currX, int currY, int nextX, int nextY) {
         if(board[currY][currX].isLegalMove(currX, currY, nextY, nextX)) {
+
             Chess.display.removeGraphic(board[nextY][nextX].getTexture());
             board[nextY][nextX] = board[currY][currX];
             board[currY][currX] = new EmptyFigure(currX * PlayingPiece.WIDTH,currY * PlayingPiece.HEIGHT,"src\\assets\\empty.png");
@@ -77,6 +78,32 @@ public class Board {
         update();
     }
 
+    public boolean isKingUnderThreat(int kingX, int kingY, King king) {
+
+        PlayingPiece help = board[kingY][kingX];
+        PlayingPiece help2 = board[king.getY() / PlayingPiece.HEIGHT][king.getX() / PlayingPiece.WIDTH];
+        board[kingY][kingX] = king;
+        board[king.getY() / PlayingPiece.HEIGHT][king.getX() / PlayingPiece.WIDTH] = new EmptyFigure(king.getX(), king.getY(), " ");
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                PlayingPiece figure = board[i][j];
+                if(figure.getColor() != king.getColor() && figure.getColor() != ' ')
+                //System.out.println("test: " + figure.path + " i: " + i + " j: " + j + " board-length: " + board.length + " board[i]-length: " + board[i].length );
+                if(figure.isLegalMove(figure.getX() / PlayingPiece.WIDTH, figure.getY() / PlayingPiece.HEIGHT, kingY, kingX)) {
+                    board[kingY][kingX] = help;
+                    board[king.getY() / PlayingPiece.HEIGHT][king.getX() / PlayingPiece.WIDTH] = help2;
+                    System.out.println("threat: " + figure.path);
+                    return true;
+                }
+            }
+        }
+        System.out.println("help: " + help.path);
+        board[kingY][kingX] = help;
+        board[king.getY() / PlayingPiece.HEIGHT][king.getX() / PlayingPiece.WIDTH] = help2;
+
+        return false;
+    }
 
     public void render() {
         boardTex.render();

@@ -1,7 +1,6 @@
 package chess.figures;
 
 import chess.Chess;
-import chess.TextureManager;
 
 public class Bishop extends PlayingPiece {
 
